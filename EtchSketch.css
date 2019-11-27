@@ -1,14 +1,20 @@
 .gridCont {
     margin: 50px 50px;
     display: inline-block;
+    object-fit: fill;
+    text-align: center;
 }
 
 .gridCont #gridSq {
-    height: 30px;
-    width: 30px;
-    margin-top: -4px;   /*there are other methods to remove inline-block white space, but since we are using JS DOM methods, this is the easiest.*/
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex: auto;
+    margin: auto;   /*there are other methods to remove inline-block white space, but since we are using JS DOM methods, this is the easiest.*/
+    margin-top: -1px;       /* aligned first column (sqr) with the rest of the columns (col)*/
     background-color: white;
     border-width: thin;
     border-style: solid;
-    display: inline-block;  /* Must be included for squares to make columns */
+    /*display: inline-block;  /* Must be included for squares to make columns */
+    padding-left: 50px;     /* Makes thin square to wider square; preferred to create ratio for this one as well then appendChild in JS*/
 }
